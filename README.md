@@ -1,44 +1,13 @@
-# PouchDB (WIP)
+# nuxt-coffee
 
-Adds pouchdb to your nuxt application using [vue-pouch](http://www.github.com/buhrmi/vue-pouch), tightly integrating functionality from [pouch-find](http://nolanlawson.github.io/pouchdb-find/), [pouchdb-live-find](https://github.com/colinskow/pouchdb-live-find) and [pouchdb-authentication](https://github.com/pouchdb-community/pouchdb-authentication).
-
-(Better docs coming soon)
+Allows you to require `.coffee` files from within nuxt just as you would require `.js` files. You can also use it to write your plugins, middlewares, etc. in CoffeeScript
 
 ## Setup
-- Add `nuxt-pouch` dependency using yarn or npm to your project
-- Add `nuxt-pouch` module to `nuxt.config.js`:
+- Add `nuxt-coffee` dependency using yarn or npm to your project
+- Add `nuxt-coffee` module to `nuxt.config.js`:
 
 ```js
   modules: [
-    'nuxt-pouch'
+    'nuxt-coffee'
   ]
 ````
-
-## Usage
-
-```vue
-<template>
-  <div class="todo-list">
-    <input v-model="message" placeholder="New Todo">
-    <button @click="$pouch.post('todos', {message: message});message=''">Save Todo</button>
-    <ol>
-      <li v-for="todo in todos">
-        <input v-model="todo.message" @change="$pouch.put('todos', todo)">
-        <button @click="$pouch.remove('todos', todo)">Remove</button>
-      </li>
-    </ol>
-  </div>
-</template>
-
-<script>
-  export default {
-    // VuePouch adds a `pouch` config option to all components.
-    pouch: {
-      // The simplest usage. queries all documents from the "todos" pouch database and assigns them to the "todos" vue property.
-      todos: {/*empty selector*/}
-    }
-  }
-</script>
-```
-
-See the [vue-pouch](http://www.github.com/buhrmi/vue-pouch) repo for documentation.

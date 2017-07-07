@@ -1,12 +1,12 @@
 {
-  "name": "nuxt-pouch",
+  "name": "nuxt-coffee",
   "version": "0.1.0",
-  "description": "Adds reactive PouchDB bindings to Nuxt",
+  "description": "Use .coffee files across your nuxt development",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buhrmi/nuxt-pouch.git"
+    "url": "git+https://github.com/buhrmi/nuxt-coffee.git"
   },
-  "homepage": "https://github.com/buhrmi/nuxt-pouch",
+  "homepage": "https://github.com/buhrmi/nuxt-coffee",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,10 +15,6 @@
   "author": "Stefan Buhrmester <buhrmi@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "pouchdb": "^6.2.0",
-    "pouchdb-find": "^6.2.0",
-    "pouchdb-live-find": "^0.4.0",
-    "vue": "^2.3.4",
-    "vue-pouch": "^0.0.22"
+    "coffeescript": "^2.0.0-beta3"
   }
 }
